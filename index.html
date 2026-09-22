@@ -1,55 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LEZIX DATA HUB | Data Bundles</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
-.wrap{max-width:760px;margin:auto;padding:16px}header{background:#071b55;border-radius:20px;padding:12px;text-align:center;box-shadow:0 10px 30px #0002}
-header img{width:100%;max-width:620px;border-radius:14px;display:block;margin:auto}h1{text-align:center;font-size:25px;margin:22px 0 8px}
-.intro{text-align:center;color:#5b6578}.card{background:#fff;border-radius:18px;padding:20px;margin:16px 0;box-shadow:0 8px 24px #14234614}
-label{display:block;font-weight:700;margin:12px 0 7px}input,select{width:100%;padding:13px;border:1px solid #d6dce8;border-radius:10px;font-size:16px}
-button,.btn{display:block;width:100%;border:0;border-radius:12px;padding:14px;margin-top:14px;font-size:16px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer}
-.whatsapp{background:#16a34a;color:#fff}.call{background:#123b8f;color:#fff}.note{text-align:center;color:#6a7383;font-size:13px}
-.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.price{background:#f7f9fd;border:1px solid #e1e6ef;border-radius:12px;padding:12px;text-align:center}
-.price strong{display:block}.price span{color:#087a4b;font-weight:700}footer{text-align:center;padding:20px;color:#6a7383;font-size:13px}
-</style></head>
-<body><main class="wrap">
-<header><img src="logo.png" alt="LEZIX DATA HUB logo"></header>
-<h1>Affordable Data Bundles</h1><p class="intro">Choose your bundle and order directly through WhatsApp.</p>
-<section class="card"><h2>Quick Order</h2>
-<label for="bundle">Select Data Bundle</label>
-<select id="bundle">
-<option>1 GB - GH₵6.00</option><option>2 GB - GH₵12.00</option><option>3 GB - GH₵18.00</option>
-<option>4 GB - GH₵24.00</option><option>5 GB - GH₵29.00</option><option>6 GB - GH₵36.00</option>
-<option>8 GB - GH₵44.00</option><option>10 GB - GH₵52.00</option><option>15 GB - GH₵72.00</option>
-<option>20 GB - GH₵95.00</option><option>25 GB - GH₵115.00</option><option>30 GB - GH₵144.00</option>
-<option>40 GB - GH₵175.00</option><option>50 GB - GH₵220.00</option>
-</select>
-<label for="phone">Phone Number to Receive Data</label><input id="phone" type="tel" placeholder="e.g. 0241234567">
-<label for="name">Your Name (optional)</label><input id="name" type="text" placeholder="Enter your name">
-<button class="whatsapp" onclick="orderWhatsApp()">Order via WhatsApp</button>
-<a class="btn call" href="tel:+233249186074">Call 0249186074</a>
-<div style="margin-top:16px;padding:16px;background:#fff8e1;border:1px solid #f0d58a;border-radius:14px"><strong>📱 Pay with MTN MoMo</strong><div style="font-size:25px;font-weight:800;margin:8px 0">0249186074</div><div>Send the exact bundle amount, then confirm your order on WhatsApp.</div><button style="background:#f0a500;color:#fff" onclick="navigator.clipboard.writeText('0249186074');alert('MTN MoMo number copied: 0249186074')">Copy Payment Number</button></div><p class="note">WhatsApp: 0249186074</p></section>
-<section class="card"><h2>Data Prices</h2><div class="prices">
-<div class="price"><strong>1 GB</strong><span>GH₵6.00</span></div><div class="price"><strong>2 GB</strong><span>GH₵12.00</span></div>
-<div class="price"><strong>3 GB</strong><span>GH₵18.00</span></div><div class="price"><strong>4 GB</strong><span>GH₵24.00</span></div>
-<div class="price"><strong>5 GB</strong><span>GH₵29.00</span></div><div class="price"><strong>6 GB</strong><span>GH₵36.00</span></div>
-<div class="price"><strong>8 GB</strong><span>GH₵44.00</span></div><div class="price"><strong>10 GB</strong><span>GH₵52.00</span></div>
-<div class="price"><strong>15 GB</strong><span>GH₵72.00</span></div><div class="price"><strong>20 GB</strong><span>GH₵95.00</span></div>
-<div class="price"><strong>25 GB</strong><span>GH₵115.00</span></div><div class="price"><strong>30 GB</strong><span>GH₵144.00</span></div>
-<div class="price"><strong>40 GB</strong><span>GH₵175.00</span></div><div class="price"><strong>50 GB</strong><span>GH₵220.00</span></div>
-</div></section><footer>© LEZIX DATA HUB • Call / WhatsApp 0249186074</footer>
-</main>
-<script>
-function orderWhatsApp(){
- const s=document.getElementById('bundle');
- const bundle=s.value;
- const phone=document.getElementById('phone').value.trim();
- const name=document.getElementById('name').value.trim();
- if(!phone){alert('Please enter the phone number that should receive the data.');return;}
- const price=bundle.split(' - GH₵')[1];
- const msg='Hello LEZIX DATA HUB, I want to order data.\n\nBundle: '+bundle+'\nAmount: GH₵'+price+'\nRecipient number: '+phone+(name?'\nName: '+name:'')+'\nPayment method: MTN MoMo\nPayment number: 0249186074\n\nI have made the payment.';
- window.open('https://wa.me/233249186074?text='+encodeURIComponent(msg),'_blank');
-}
-</script></body></html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEZIX DATA HUB</title>
+  <meta name="description" content="LEZIX DATA HUB affordable MTN data bundles. Quick order via WhatsApp or phone call.">
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#07172d;color:#fff}
+    .wrap{max-width:900px;margin:auto;padding:18px}
+    .flyer{width:100%;display:block;border-radius:18px;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+    .card{margin-top:20px;background:linear-gradient(145deg,#0c2345,#071326);border:1px solid rgba(255,193,7,.45);border-radius:18px;padding:22px;box-shadow:0 12px 35px rgba(0,0,0,.35)}
+    h1{margin:0 0 6px;text-align:center;color:#ffd21a;font-size:30px}
+    .sub{text-align:center;margin:0 0 20px;color:#dbe8ff}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    label{font-weight:700;color:#fff}
+    select,input{width:100%;margin-top:7px;padding:13px;border-radius:10px;border:1px solid #496789;background:#fff;color:#111;font-size:16px}
+    .buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    a.btn{display:block;text-align:center;text-decoration:none;padding:15px;border-radius:12px;font-weight:800}
+    .wa{background:#25d366;color:#071326}
+    .call{background:#ffc400;color:#071326}
+    .note{text-align:center;margin:16px 0 0;color:#aebfd8;font-size:13px}
+    footer{text-align:center;color:#9fb2cc;padding:18px 0 8px;font-size:13px}
+    @media(max-width:600px){.grid,.buttons{grid-template-columns:1fr}.wrap{padding:10px}h1{font-size:25px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="flyer" src="banner.jpg" alt="LEZIX DATA HUB MTN data bundle flyer">
+
+    <section class="card">
+      <h1>Quick Order</h1>
+      <p class="sub">Choose your data bundle and place your order instantly.</p>
+
+      <div class="grid">
+        <div>
+          <label for="bundle">Data Bundle</label>
+          <select id="bundle">
+            <option value="1GB - GH₵6.00">1 GB - GH₵6.00</option>
+            <option value="2GB - GH₵12.00">2 GB - GH₵12.00</option>
+            <option value="3GB - GH₵18.00">3 GB - GH₵18.00</option>
+            <option value="4GB - GH₵24.00">4 GB - GH₵24.00</option>
+            <option value="5GB - GH₵29.00">5 GB - GH₵29.00</option>
+            <option value="6GB - GH₵36.00">6 GB - GH₵36.00</option>
+            <option value="8GB - GH₵44.00">8 GB - GH₵44.00</option>
+            <option value="10GB - GH₵52.00">10 GB - GH₵52.00</option>
+            <option value="15GB - GH₵72.00">15 GB - GH₵72.00</option>
+            <option value="20GB - GH₵95.00">20 GB - GH₵95.00</option>
+            <option value="25GB - GH₵115.00">25 GB - GH₵115.00</option>
+            <option value="30GB - GH₵144.00">30 GB - GH₵144.00</option>
+            <option value="40GB - GH₵175.00">40 GB - GH₵175.00</option>
+            <option value="50GB - GH₵220.00">50 GB - GH₵220.00</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="phone">Recipient Phone Number</label>
+          <input id="phone" type="tel" placeholder="e.g. 0241234567">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a id="whatsapp" class="btn wa" href="https://wa.me/233249186074" target="_blank" rel="noopener">📱 Order on WhatsApp</a>
+        <a class="btn call" href="tel:+233249186074">📞 Call 0249186074</a>
+      </div>
+      <p class="note">WhatsApp: 0249186074 · Call: 0249186074</p>
+    </section>
+
+    <footer>© LEZIX DATA HUB · Affordable data bundles</footer>
+  </main>
+
+  <script>
+    const bundle = document.getElementById('bundle');
+    const phone = document.getElementById('phone');
+    const whatsapp = document.getElementById('whatsapp');
+
+    function updateWhatsApp(){
+      const message = `Hello LEZIX DATA HUB, I want to order ${bundle.value}. Recipient number: ${phone.value || '[please provide number]'}.`;
+      whatsapp.href = `https://wa.me/233249186074?text=${encodeURIComponent(message)}`;
+    }
+    bundle.addEventListener('change', updateWhatsApp);
+    phone.addEventListener('input', updateWhatsApp);
+    updateWhatsApp();
+  </script>
+</body>
+</html>
