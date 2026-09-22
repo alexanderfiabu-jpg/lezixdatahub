@@ -30,7 +30,7 @@ button,.btn{display:block;width:100%;border:0;border-radius:12px;padding:14px;ma
 <label for="name">Your Name (optional)</label><input id="name" type="text" placeholder="Enter your name">
 <button class="whatsapp" onclick="orderWhatsApp()">Order via WhatsApp</button>
 <a class="btn call" href="tel:+233249186074">Call 0249186074</a>
-<div style="margin-top:16px;padding:16px;background:#fff8e1;border:1px solid #f0d58a;border-radius:14px"><strong>💳 Pay with Telecel Cash</strong><div style="font-size:25px;font-weight:800;margin:8px 0">0208618337</div><div>Send the exact bundle amount, then confirm your order on WhatsApp.</div><button style="background:#f0a500;color:#fff" onclick="navigator.clipboard.writeText('0208618337');alert('Telecel Cash number copied: 0208618337')">Copy Payment Number</button></div><p class="note">WhatsApp: 0249186074</p></section>
+<div style="margin-top:16px;padding:16px;background:#fff8e1;border:1px solid #f0d58a;border-radius:14px"><strong>📱 Pay with MTN MoMo</strong><div style="font-size:25px;font-weight:800;margin:8px 0">0249186074</div><div>Send the exact bundle amount, then confirm your order on WhatsApp.</div><button style="background:#f0a500;color:#fff" onclick="navigator.clipboard.writeText('0249186074');alert('MTN MoMo number copied: 0249186074')">Copy Payment Number</button></div><p class="note">WhatsApp: 0249186074</p></section>
 <section class="card"><h2>Data Prices</h2><div class="prices">
 <div class="price"><strong>1 GB</strong><span>GH₵6.00</span></div><div class="price"><strong>2 GB</strong><span>GH₵12.00</span></div>
 <div class="price"><strong>3 GB</strong><span>GH₵18.00</span></div><div class="price"><strong>4 GB</strong><span>GH₵24.00</span></div>
@@ -49,7 +49,7 @@ function orderWhatsApp(){
  const name=document.getElementById('name').value.trim();
  if(!phone){alert('Please enter the phone number that should receive the data.');return;}
  const price=bundle.split(' - GH₵')[1];
- const msg='Hello LEZIX DATA HUB, I want to order data.\n\nBundle: '+bundle+'\nAmount: GH₵'+price+'\nRecipient number: '+phone+(name?'\nName: '+name:'')+'\nPayment method: Telecel Cash\nPayment number: 0208618337\n\nI have made the payment.';
+ const msg='Hello LEZIX DATA HUB, I want to order data.\n\nBundle: '+bundle+'\nAmount: GH₵'+price+'\nRecipient number: '+phone+(name?'\nName: '+name:'')+'\nPayment method: MTN MoMo\nPayment number: 0249186074\n\nI have made the payment.';
  window.open('https://wa.me/233249186074?text='+encodeURIComponent(msg),'_blank');
 }
 </script></body></html>
